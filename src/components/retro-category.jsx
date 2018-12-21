@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
 import TopicList from "./topic-list";
 
-class RetroColumn extends Component {
+class RetroCategory extends Component {
   componentDidUpdate() {
-    this.props.inputElement.current.focus()
   }
 
   render() {
@@ -12,11 +11,11 @@ class RetroColumn extends Component {
         <form onSubmit={this.props.addTopic}>
           <input
             placeholder="Topic"
-            ref={this.props.inputElement}
+            ref={this.props.inputTopicElement}
             value={this.props.currentTopic.text}
-            onChange={this.props.handleInput}
+            onChange={this.props.handleTopicInput}
           />
-          <button type="submit"> Add Topic </button>
+          <button type="submit"> Add Topic</button>
         </form>
         <TopicList deleteTopic={this.props.deleteTopic} entries={this.props.topics}/>
       </div>
@@ -24,4 +23,4 @@ class RetroColumn extends Component {
   }
 }
 
-export default RetroColumn
+export default RetroCategory
