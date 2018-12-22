@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import RetroCategory from "./components/retro-category";
 import CreateCategory from "./components/create-category";
 import Category from "./components/category";
 
@@ -32,10 +31,10 @@ class App extends Component {
   }
 
   addTopic = e => {
-    e.preventDefault()
-    const newTopic = this.state.currentTopic
+    e.preventDefault();
+    const newTopic = this.state.currentTopic;
     if (newTopic.text !== '') {
-      const topics = [...this.state.topics, newTopic]
+      const topics = [...this.state.topics, newTopic];
       this.setState({
         topics: topics,
         currentTopic: { text: '', key: '' },
@@ -44,10 +43,10 @@ class App extends Component {
   }
 
   addCategory = e =>{
-    e.preventDefault()
-    const newCategory = this.state.currentCategory
+    e.preventDefault();
+    const newCategory = this.state.currentCategory;
     if (newCategory.text !== '') {
-      const categories = [...this.state.categories, newCategory]
+      const categories = [...this.state.categories, newCategory];
       this.setState({
         categories: categories,
         currentCategory: { text: '', key: '' },
@@ -81,8 +80,6 @@ class App extends Component {
           />
           <Category
             categories={this.state.categories}
-          />
-          <RetroCategory
             addTopic={this.addTopic}
             inputTopicElement={this.inputTopicElement}
             handleTopicInput={this.handleTopicInput}
