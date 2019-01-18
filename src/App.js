@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import CreateCategory from "./components/create-category";
 import Category from "./components/category";
@@ -70,7 +69,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <CreateCategory
             addCategory={this.addCategory}
             inputCategoryElement={this.inputCategoryElement}
