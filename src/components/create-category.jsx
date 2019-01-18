@@ -6,15 +6,15 @@ class CreateCategory extends Component {
 
   render() {
     return (
-      <form onSubmit={this.props.addCategory}>
+      <div>
         <input
           placeholder="Category"
           ref={this.props.inputCategoryElement}
           value={this.props.currentCategory.text}
           onChange={this.props.handleCategoryInput}
         />
-        <button type="submit"> Add Category</button>
-      </form>
+        <button type="button" onClick={this.props.addCategory}> Add Category</button>
+      </div>
     )
   }
 }

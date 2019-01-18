@@ -9,15 +9,15 @@ class RetroCategory extends Component {
   render() {
     return (
       <div className="header">
-        <form onSubmit={this.props.addTopic}>
+        <div>
           <input
             placeholder="Topic"
             ref={this.props.inputTopicElement}
             value={this.props.currentTopic.text}
             onChange={this.props.handleTopicInput}
           />
-          <button type="submit"> Add Topic</button>
-        </form>
+          <button type="button"  onClick={this.props.addTopic}> Add Topic</button>
+        </div>
         <TopicList
           deleteTopic={this.props.deleteTopic}
           entries={this.props.topics}

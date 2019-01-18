@@ -6,6 +6,14 @@ class Category extends Component {
     return (
       <div key={category.key}>
         {category.text}
+        <RetroCategory
+          addTopic={this.props.addTopic}
+          inputTopicElement={this.inputTopicElement}
+          handleTopicInput={this.props.handleTopicInput}
+          currentTopic={this.props.currentTopic}
+          topics={this.props.topics}
+          deleteTopic={this.deleteTopic}
+        />
       </div>
     )
   };
@@ -17,14 +25,6 @@ class Category extends Component {
     return (
       <div>
         <ul className="theList">{listCategories}</ul>
-        <RetroCategory
-          addTopic={this.props.addTopic}
-          inputTopicElement={this.inputTopicElement}
-          handleTopicInput={this.props.handleTopicInput}
-          currentTopic={this.props.currentTopic}
-          topics={this.props.topics}
-          deleteTopic={this.deleteTopic}
-        />
       </div>
     )
   }
