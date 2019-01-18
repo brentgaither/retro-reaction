@@ -12,14 +12,14 @@ class App extends Component {
       currentTopic: {text:'', key:''},
       categories: [],
       currentCategory: {text:'', key:''}
-    }
+    };
   }
   handleTopicInput = e => {
     const topicText = e.target.value;
     const currentTopic = { text: topicText, key: Date.now() };
     this.setState({
       currentTopic,
-    })
+    });
   };
 
   handleCategoryInput = e => {
@@ -27,7 +27,7 @@ class App extends Component {
     const currentCategory = { text: categoryText, key: Date.now() };
     this.setState({
       currentCategory,
-    })
+    });
   };
 
   addTopic = e => {
@@ -38,7 +38,7 @@ class App extends Component {
       this.setState({
         topics: topics,
         currentTopic: { text: '', key: '' },
-      })
+      });
     }
   };
 
@@ -50,7 +50,7 @@ class App extends Component {
       this.setState({
         categories: categories,
         currentCategory: { text: '', key: '' },
-      })
+      });
     }
   };
 
@@ -60,7 +60,7 @@ class App extends Component {
     });
     this.setState({
       topics: filteredTopics,
-    })
+    });
   };
   inputTopicElement =React.createRef();
   inputCategoryElement =React.createRef();
