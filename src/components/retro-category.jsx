@@ -16,7 +16,7 @@ class RetroCategory extends Component {
             value={this.props.currentTopic.text}
             onChange={this.props.handleTopicInput}
           />
-          <button type="button"  onClick={this.props.addTopic}> Add Topic</button>
+          <button type="button" onClick={this.props.addTopic}> Add Topic</button>
         </div>
         <TopicList
           deleteTopic={this.props.deleteTopic}

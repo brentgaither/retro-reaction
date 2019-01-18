@@ -12,7 +12,7 @@ class Category extends Component {
           handleTopicInput={this.props.handleTopicInput}
           currentTopic={this.props.currentTopic}
           topics={this.props.topics}
-          deleteTopic={this.deleteTopic}
+          deleteTopic={this.props.deleteTopic}
         />
       </div>
     )

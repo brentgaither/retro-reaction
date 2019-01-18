@@ -74,7 +74,6 @@ class App extends Component {
             inputCategoryElement={this.inputCategoryElement}
             handleCategoryInput={this.handleCategoryInput}
             currentCategory={this.state.currentCategory}
-            categories={this.state.categories}
           />
           <Category
             categories={this.state.categories}
