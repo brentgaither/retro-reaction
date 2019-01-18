@@ -8,11 +8,11 @@ class Category extends Component {
         {category.text}
       </div>
     )
-  }
+  };
 
   render() {
-    const retroEntries = this.props.categories
-    const listCategories = retroEntries.map(this.createCategories)
+    const retroEntries = this.props.categories;
+    const listCategories = retroEntries.map(this.createCategories);
 
     return (
       <div>

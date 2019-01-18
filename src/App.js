@@ -6,7 +6,7 @@ import Category from "./components/category";
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       topics: [],
       currentTopic: {text:'', key:''},
@@ -15,20 +15,20 @@ class App extends Component {
     }
   }
   handleTopicInput = e => {
-    const topicText = e.target.value
-    const currentTopic = { text: topicText, key: Date.now() }
+    const topicText = e.target.value;
+    const currentTopic = { text: topicText, key: Date.now() };
     this.setState({
       currentTopic,
     })
-  }
+  };
 
   handleCategoryInput = e => {
-    const categoryText = e.target.value
-    const currentCategory = { text: categoryText, key: Date.now() }
+    const categoryText = e.target.value;
+    const currentCategory = { text: categoryText, key: Date.now() };
     this.setState({
       currentCategory,
     })
-  }
+  };
 
   addTopic = e => {
     e.preventDefault();
@@ -40,7 +40,7 @@ class App extends Component {
         currentTopic: { text: '', key: '' },
       })
     }
-  }
+  };
 
   addCategory = e =>{
     e.preventDefault();
@@ -52,16 +52,16 @@ class App extends Component {
         currentCategory: { text: '', key: '' },
       })
     }
-  }
+  };
 
   deleteTopic = key => {
     const filteredTopics = this.state.topics.filter(topic => {
-      return topic.key !== key
-    })
+      return topic.key !== key;
+    });
     this.setState({
       topics: filteredTopics,
     })
-  }
+  };
   inputTopicElement =React.createRef();
   inputCategoryElement =React.createRef();
 
